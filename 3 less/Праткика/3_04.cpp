@@ -18,10 +18,20 @@ int main()
     }
     // cout << number << " " << cnt << endl;
 
+    int max = 0;
+    int min = 9;
     for (int i = 0; i < cnt; i++)
     {
+
         // int digit = number;
-        cout << (int)(number / pow(10, cnt - i - 1)) % 10 << " ";
+        if (number % 10 > max)
+            max = number % 10;
+
+        if (number % 10 < min)
+            min = number % 10;
+
+        number /= 10;
+
         // cout << digit << " ";
         // 1234
         // 1 =  number /pow(10, 4 -1) %10
@@ -29,4 +39,7 @@ int main()
         // 3 =  number / pow(10, 4 - 3) % 10
         // 4 =  number /pow(10, 4 - 4) % 10
     }
+
+    cout << "Max: " << max << " "
+         << "MIn: " << min << endl;
 }
