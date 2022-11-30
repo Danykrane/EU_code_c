@@ -14,9 +14,10 @@ int main()
 	for (int i = 1; i <= 10; i++)
 	{
 		int otvet = 0;
-		cout << i << " * 11 = ";
-		otvet = i * 11;
-		cout << otvet << endl;
+		cout << i << " * 11 = " << i * 11 << endl;
+
+		// otvet = i * 11;
+		// cout << otvet << endl;
 	}
 	cout << endl;
 	// cout << "Zadanie 3" << endl;
