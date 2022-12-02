@@ -6,7 +6,7 @@ int main()
 {
     float wes[] = {2.12, -45.23, -5, 3.12, -1};
     int size = 5;
-    // int value_for_check;
+    int value_for_check;
     // cout << wes[0];
     // cout << wes[1];
     // cout << wes[2];
