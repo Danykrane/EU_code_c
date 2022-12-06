@@ -6,7 +6,7 @@ int main()
 {
 
     int count, dopmassiv;
-    float arr[10] = {};
+    float arr[100] = {};
 
     cout << "Введите размер первого массива: ";
     cin >> count;
@@ -25,7 +25,7 @@ int main()
 
     for (int i = 0; i < count - 1; i++)
     {
-        for (int j = 0; j < count - 1; j++)
+        for (int j = 0; j < count - 1 - i; j++)
         {
             if (arr[j] > arr[j + 1])
                 swap(arr[j], arr[j + 1]);
@@ -52,7 +52,7 @@ int main()
 
     for (int i = 0; i < (count + dopmassiv) - 1; i++)
     {
-        for (int j = 0; j < (count + dopmassiv) - 1; j++)
+        for (int j = 0; j < (count + dopmassiv) - 1 - i; j++)
         {
             if (arr[j] > arr[j + 1])
                 swap(arr[j], arr[j + 1]);
