@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 using namespace std;
 
 void show_alphabeth();
@@ -11,15 +12,15 @@ int main()
 
 void show_alphabeth()
 {
-    for (int i = 65; i < 91; i++)
+    for (char i = 97; i < 122; i++)
     {
-        cout << static_cast<char>(i) << " ";
+        cout << (i) << " ";
     }
 
     cout << endl;
 
-    for (int i = 97; i < 97 + 26; i++)
+    for (char i = 97; i < 122; i++)
     {
-        cout << static_cast<char>(i) << " ";
+        cout << static_cast<char>(toupper(i)) << " ";
     }
 }

@@ -9,7 +9,8 @@ int main()
     char symb1;
     char symb2;
 
-    cin >> symb1 >> symb2;
+    cin.get(symb1);
+    cin.get(symb2);
 
     cout << static_cast<int>(symb1) << endl;
     cout << static_cast<int>(symb2) << endl;
