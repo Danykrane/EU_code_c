@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-    char str[100] = {};
-    cin.getline(str, 100);
+    char str[101] = {};
+    cin.getline(str, 101);
 
     bool isnum = 0;
     bool isAlp = 0;
@@ -24,7 +24,17 @@ int main()
     }
 
     if (isnum && isAlp && isalp && strlen(str) >= 8)
-        cout << "OK";
+    {
+        cout << "OK" << endl;
+        cout << "Введите еще раз" << endl;
+        char str2[101] = {};
+        cin.getline(str2, 101);
+        if (strcmp(str, str2) == 0)
+            cout << "пароль принят" << endl;
+        else
+            cout << "пароль не принят" << endl;
+    }
+
     else
         cout << "NO";
 }
