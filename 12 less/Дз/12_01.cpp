@@ -45,7 +45,7 @@ public:
         return *this;
     }
 };
-//протоип ф-ии возвр объект
+
 int main()
 {
     Animal Cat("Barsik", 10.2), Lion("Alex", 8), Hippo(" ", 0.45);
