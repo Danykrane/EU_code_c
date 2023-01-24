@@ -10,17 +10,26 @@ int main()
     cin >> col;
     vector<double> magasine(col);
 
-    for (auto iter = magasine.begin(); iter != magasine.end(); iter++)
+    // for (auto iter = magasine.begin(); iter != magasine.end(); iter++)
+    // {
+    //     cin >> *iter;
+    // }
+    // auto it = magasine.begin();
+    for (auto &iter : magasine)
     {
-        cin >> *iter;
+        cin >> iter;
     }
 
     double sum = 0;
 
-    for (auto iter = magasine.begin(); iter != magasine.end(); iter++)
+    for (auto iter : magasine)
     {
-        sum += *iter;
+        sum += iter;
     }
+    // for (auto iter = magasine.begin(); iter != magasine.end(); iter++)
+    // {
+    //     sum += *iter;
+    // }
 
     cout << "Итоговая стоимость: " << sum << endl;
 }

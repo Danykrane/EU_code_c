@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -28,7 +29,18 @@ public:
         magasine.resize(size);
         scan();
     }
-
+    void check()
+    {
+        int cnt = 0;
+        for (auto &iter : magasine)
+        {
+            if (iter > 500)
+                iter = 0;
+            cnt++;
+        }
+        sort(magasine.begin(), magasine.end());
+        magasine.erase(magasine.begin(), magasine.begin() + cnt);
+    }
     void scan()
     {
         for (auto &iter : magasine)
@@ -48,7 +60,7 @@ public:
     }
 };
 
-void show(const double &num)
+void show(const double num)
 {
     cout << "Итоговая стоимость: " << num << endl;
 }
@@ -57,5 +69,6 @@ int main()
 {
     Corsina perv;
     perv.read();
+    perv.check();
     show(perv.sum());
 }
