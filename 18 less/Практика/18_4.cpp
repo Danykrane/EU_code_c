@@ -35,13 +35,28 @@ public:
         // }
         return sum;
     }
+
+    ~summator()
+    {
+        cout << "Объект удален" << endl;
+    }
+
+    int funcCalc(bool even)
+    {
+        int temp;
+        return temp;
+    }
 };
 
 int main()
 {
-    
-    summator sums(vector<int>({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+    vector<int> values{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    cout << summator(values)(true) << endl; // локальное создание объекта толлько на время работы ф-ии вывода //функтор
 
-    cout << "сумма чётных = " << sums(true) << endl
-         << "сумма нечётных = " << sums(false) << endl;
+    cout << "Hey" << endl;
+    summator rez(values);
+
+    cout << summator(values).funcCalc(true) << endl; // объект и от объекта вызыввется ф-ия
+    // cout << "сумма чётных = " << sums(true) << endl
+    // << "сумма нечётных = " << sums(false) << endl;
 }
