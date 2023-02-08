@@ -15,6 +15,7 @@ void add(map<string, string> &test, const int &kol)
     for (int i = 0; i < kol; i++)
     {
         cin >> name >> place;
+        // test.insert(make_pair(name, place));
         test[name] = place;
     }
 }
@@ -38,7 +39,7 @@ int main()
         case 1:
             cout << "Вы нажали кнопку «1»";
 
-            cout << "в данный момент в справочнике " << col(fish) << " обитателей." << endl;
+            cout << "в данный момент в справочнике " << fish.size() << " обитателей." << endl;
             cout << "Сколько объектов хотите добавить в словарь? (Рыба и место ее обитания)" << endl;
             int k;
             cin >> k;
