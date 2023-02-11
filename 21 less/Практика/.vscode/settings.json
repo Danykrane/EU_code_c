@@ -78,6 +78,8 @@
     "memory_resource": "cpp",
     "utility": "cpp",
     "stop_token": "cpp",
-    "version": "cpp"
+    "version": "cpp",
+    "list": "cpp",
+    "set": "cpp"
   }
 }

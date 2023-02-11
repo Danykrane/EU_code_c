@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/artemgudzenko/Desktop/Less_1/Выгрузка курска/EU_code_c--/20 less/Практика/HW",
+      "program": "/Users/artemgudzenko/Desktop/Less_1/Выгрузка курска/EU_code_c--/20 less/Практика/HW/build/Debug/outDebug"
+    }
+  ]
+}

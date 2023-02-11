@@ -10,6 +10,7 @@ auto pr([](int a, int b)
 int main()
 {
     int val1, val2;
+    read(val1, val2);
     // считывание лямбдой val1 и val2
     auto read1([&val1, &val2]()
                { cin >> val1 >> val2; });
@@ -18,7 +19,7 @@ int main()
     // вывод произведения двух значений через лямбду
     auto pr1([val1, val2]()
              { return val1 * val2; });
-
+    cout << pr(val1, val2);
     cout << pr1();
 
     return 0;

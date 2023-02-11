@@ -23,7 +23,7 @@ int main()
         cout << "Сумма двух вещественных чисел: " << sum(1.3, 5.56);
         break;
     case 3:
-        cout << "Сумма двух char значений: " << static_cast<char>(sum('9', '5'));
+        cout << "Сумма двух char значений: " << static_cast<char>(sum('10', '5'));
         break;
     case 4:
         cout << "Дизъюнкция двух bool значений: " << (sum(false, true));
