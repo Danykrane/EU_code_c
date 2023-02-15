@@ -16,6 +16,12 @@ int sum(const vector<int> &vals)
 
 int main(int argc, char **argv)
 {
+
+    int x = 3;
+    void *a = (void *)&x;
+    cout << &x << endl;
+    cout << a << endl;
+
     // argc - количество аргументов
     // argv - масссив аргументов
     cout << "Работа программы" << endl;
