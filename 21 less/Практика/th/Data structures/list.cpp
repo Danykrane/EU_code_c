@@ -147,7 +147,7 @@ int main()
     spis.push_back(5);
     spis.push_back(6);
     spis.push_back(7);
-    spis.push_back(10);
+
     // cout << spis.getS() << endl;
 
     // cout << spis[0] << endl;
@@ -156,6 +156,7 @@ int main()
     {
         cout << spis[i] << " ";
     }
+
     spis.reverse();
     cout << endl;
     cout << "Всего элементов: " << spis.getS() << endl;
