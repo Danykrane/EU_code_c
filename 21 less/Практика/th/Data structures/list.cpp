@@ -34,7 +34,7 @@ public:
 
     void push_front(T value)
     {
-        head = new Node<T>(value, heads);
+        head = new Node<T>(value, head);
         size++;
     }
 
@@ -116,38 +116,67 @@ public:
             pop_front();
         }
     }
+
+    void reverse()
+    {
+        // Initialize current, previous and next pointers
+        Node<T> *current = this->head;
+        Node<T> *prev = nullptr, *next = nullptr;
+
+        while (current != nullptr)
+        {
+            // Store next
+            next = current->ptr_next;
+            // Reverse current node's pointer
+            current->ptr_next = prev;
+            // Move pointers one position ahead.
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
 };
 
 int main()
 {
     List<int> spis;
-    spis.push_back(15);
-    spis.push_back(10);
+    spis.push_back(1);
+    spis.push_back(2);
+    spis.push_back(3);
+    spis.push_back(4);
     spis.push_back(5);
+    spis.push_back(6);
+    spis.push_back(7);
+    spis.push_back(10);
     // cout << spis.getS() << endl;
 
     // cout << spis[0] << endl;
 
     for (int i = 0; i < spis.getS(); i++)
     {
-        cout << spis[i] << endl;
+        cout << spis[i] << " ";
     }
-
+    spis.reverse();
+    cout << endl;
     cout << "Всего элементов: " << spis.getS() << endl;
-
-    spis.pop_front();
     for (int i = 0; i < spis.getS(); i++)
     {
-        cout << spis[i] << endl;
+        cout << spis[i] << " ";
     }
 
-    cout << "Всего элементов: " << spis.getS() << endl;
+    // spis.pop_front();
+    // for (int i = 0; i < spis.getS(); i++)
+    // {
+    //     cout << spis[i] << endl;
+    // }
 
-    spis.pop_back();
-    for (int i = 0; i < spis.getS(); i++)
-    {
-        cout << spis[i] << endl;
-    }
+    // cout << "Всего элементов: " << spis.getS() << endl;
 
-    cout << "Всего элементов: " << spis.getS() << endl;
+    // spis.pop_back();
+    // for (int i = 0; i < spis.getS(); i++)
+    // {
+    //     cout << spis[i] << endl;
+    // }
+
+    // cout << "Всего элементов: " << spis.getS() << endl;
 }
