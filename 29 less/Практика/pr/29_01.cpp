@@ -9,21 +9,25 @@ std::mutex mutex;
 void thread_func1(std::vector<int> &x)
 {
 
-    mutex.lock();
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    std::cout << "1 th" << std::endl;
-    x.push_back(0);
-    mutex.unlock();
+    {
+        // область видимости lock_guard
+        std::lock_guard<std::mutex> l(mutex);
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::cout << "1 th" << std::endl;
+        x.push_back(0);
+    }
 
-    size_t i = 10000;
+    // асинхронный код
+    size_t i = 100;
     while (i--)
     {
-        std::this_thread::sleep_for(std::chrono::milliseconds(20));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
         std::cout << i << " ";
     }
 }
 void thread_func2(std::vector<int> &x)
 {
+    std::cout << "Some text" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
     std::cout << "Some text" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
